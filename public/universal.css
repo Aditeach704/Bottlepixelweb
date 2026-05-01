@@ -1,0 +1,115 @@
+/**
+ * Bottle Pixel | Universal Dashboard Framework
+ */
+
+:root {
+    --bg-main: #05060a;
+    --side-bg: #0d0f17;
+    --accent: #53bdeb;
+    --admin-red: #ff4757;
+    --text-dim: #94a3b8;
+    --glass-border: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-main);
+    color: white;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    overflow: hidden; /* Prevents scrollbars on the main layout */
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* --- UNIVERSAL SIDEBAR --- */
+.sidebar {
+    width: 280px;
+    background-color: var(--side-bg);
+    border-right: 1px solid var(--glass-border);
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    animation: slideInLeft 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 100;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--accent);
+    letter-spacing: 2px;
+    margin-bottom: 45px;
+    text-shadow: 0 0 20px rgba(83, 189, 235, 0.3);
+}
+
+.nav-link {
+    display: block;
+    padding: 14px 18px;
+    color: var(--text-dim);
+    text-decoration: none;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(83, 189, 235, 0.08);
+    color: white;
+    transform: translateX(8px);
+}
+
+.nav-link.active {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 10px 20px rgba(83, 189, 235, 0.25);
+    transform: translateX(5px);
+}
+
+/* --- ADMIN PANEL STYLING --- */
+.admin-divider {
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--admin-red);
+    letter-spacing: 2.5px;
+    margin: 30px 0 12px 15px;
+    opacity: 0.8;
+}
+
+.admin-link {
+    border-left: 2px solid var(--admin-red);
+    background: rgba(255, 71, 87, 0.03);
+}
+
+.admin-link:hover {
+    background: rgba(255, 71, 87, 0.1);
+    color: #ff6b81;
+}
+
+/* --- MAIN CONTENT AREA --- */
+.main-content {
+    flex: 1;
+    padding: 50px;
+    overflow-y: auto;
+    background: radial-gradient(circle at top right, rgba(83, 189, 235, 0.03), transparent);
+}
+
+/* --- GLOBAL ANIMATIONS --- */
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}

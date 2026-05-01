@@ -1,0 +1,115 @@
+:root {
+    --bg: #050505;
+    --card: #0f1217;
+    --accent: #00ff99;
+    --text-dim: #949ba4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.logout-container {
+    text-align: center;
+    max-width: 450px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 32px;
+    backdrop-filter: blur(20px);
+    animation: slideUp 0.8s ease-out;
+}
+
+/* Animated Logout Icon */
+.icon-box {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(0, 255, 153, 0.2);
+    border-top: 3px solid var(--accent);
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.door-icon {
+    font-size: 32px;
+    filter: drop-shadow(0 0 10px var(--accent));
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+p {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+p span {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.btn-return {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--accent);
+    color: #000;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 800;
+    font-size: 15px;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 255, 153, 0.1);
+}
+
+.btn-return:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 255, 153, 0.2);
+}
+
+.auto-redirect {
+    margin-top: 20px;
+    font-size: 12px;
+    opacity: 0.5;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

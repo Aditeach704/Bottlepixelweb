@@ -1,0 +1,104 @@
+:root {
+    --bg: #030406;
+    --card-bg: #0b0e14;
+    --leader: #ff3e3e;
+    --king: #ffaa00;
+    --legendary: #b137ff;
+    --vip: #00ffaa;
+    --yt: #ff0000;
+    --insta: #e1306c;
+    --tiktok: #00f2ea;
+    --x: #ffffff;
+}
+
+body {
+    margin: 0; background: var(--bg); color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.god-bg {
+    position: fixed; inset: 0; z-index: -1;
+    background: radial-gradient(circle at 50% 50%, #1a1f2b 0%, #030406 100%);
+}
+
+.container { padding: 40px 10%; }
+.main-nav { text-align: center; margin-bottom: 50px; }
+.main-nav h1 { font-size: 45px; letter-spacing: 5px; font-weight: 800; }
+.main-nav span { color: var(--vip); text-shadow: 0 0 20px rgba(0, 255, 170, 0.4); }
+.back-link { color: var(--vip); text-decoration: none; font-weight: bold; font-size: 14px; }
+
+.group-title { font-size: 12px; text-transform: uppercase; letter-spacing: 4px; color: #555; margin: 40px 0 20px; }
+
+/* Grid Setup */
+.rank-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
+.rank-grid.mini { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+
+/* MASTER RANK CARD */
+.rank-card {
+    border-radius: 25px;
+    padding: 2px;
+    position: relative;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    overflow: hidden;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Shimmer Animation Layer */
+.rank-card::before {
+    content: ""; position: absolute; top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+    transform: skewX(-25deg);
+    animation: shimmer 3s infinite;
+}
+
+.card-inner { background: var(--card-bg); border-radius: 23px; padding: 30px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+/* Individual Tiers */
+.r-leader { background: linear-gradient(45deg, var(--leader), #500); }
+.r-king { background: linear-gradient(45deg, var(--king), #530); }
+.r-legendary { background: linear-gradient(45deg, var(--legendary), #305); }
+.r-vip { background: linear-gradient(45deg, var(--vip), #053); }
+.r-yt { background: var(--yt); }
+.r-insta { background: linear-gradient(45deg, #f09433, var(--insta)); }
+.r-tiktok { background: var(--tiktok); }
+.r-x { background: #333; }
+
+/* Text & Buttons */
+.rank-card h2 { font-size: 22px; margin: 0; font-weight: 900; color: #fff; text-align: center; }
+.plus { color: #fff; text-shadow: 0 0 10px #fff; }
+.price { font-size: 11px; font-weight: 800; margin-top: 10px; opacity: 0.6; letter-spacing: 2px; }
+
+.perks { list-style: none; padding: 0; margin: 20px 0; width: 100%; }
+.perks li { padding: 5px 0; font-size: 13px; color: #bbb; text-align: left; }
+.perks li::before { content: "✔"; color: var(--vip); margin-right: 8px; }
+
+button {
+    width: 100%; padding: 12px; border-radius: 12px; border: none;
+    font-weight: 800; cursor: pointer; background: rgba(255,255,255,0.05); color: #fff;
+    border: 1px solid rgba(255,255,255,0.1); transition: 0.3s;
+}
+.rank-card:hover button { background: #fff; color: #000; }
+
+/* GOD TIER ROTATING BORDER */
+.god-tier::after {
+    content: ""; position: absolute; inset: -5px;
+    background: linear-gradient(45deg, var(--leader), var(--king), var(--vip), var(--leader));
+    background-size: 400%; z-index: -1; filter: blur(15px);
+    animation: borderRotate 6s linear infinite; opacity: 0.5;
+}
+
+/* Animations */
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes shimmer { 0% { left: -100%; } 100% { left: 200%; } }
+@keyframes borderRotate { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
+
+.toast {
+    position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%);
+    background: #fff; color: #000; padding: 15px 40px; border-radius: 50px;
+    font-weight: 800; transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1000;
+}
+.toast.active { bottom: 40px; }

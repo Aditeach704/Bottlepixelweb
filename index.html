@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bottle Pixel SMP</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Animated Background -->
+<div class="bg-animation">
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<!-- Navbar -->
+<header>
+  <div class="logo">⚡ Bottle Pixel</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#account">Account</a>
+    <a href="#bot">Bot</a>
+    <a href="#chat">Chat</a>
+
+    <!-- Hidden for guests -->
+    <a href="javascript:void(0)"
+       id="adminBtn"
+       onclick="openAdmin()"
+       style="display:none;">
+       Admin
+    </a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="section hero">
+
+  <h1 class="glow-text">
+    Welcome to Bottle Pixel SMP
+  </h1>
+
+  <p class="subtext">
+    Lifesteal • PvP • Events • Power • Adventure
+  </p>
+
+  <!-- Login Box -->
+  <div class="login-box">
+
+    <input
+      type="text"
+      id="usernameInput"
+      placeholder="Enter Username">
+
+    <button onclick="loginUser()">
+      Enter
+    </button>
+
+    <button onclick="logoutUser()">
+      Logout
+    </button>
+
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-box">
+
+    <div class="card">
+      <h2 id="onlineCount">Many Players</h2>
+      <p>Online Right Now</p>
+    </div>
+
+    <div class="card">
+      <h2>SharpPlayz</h2>
+      <p>Is Our Owner</p>
+    </div>
+
+    <div class="card">
+      <h2>PvP</h2>
+      <p>Battle System</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Account -->
+<section id="account" class="section">
+
+  <h1>Your Account</h1>
+
+  <div class="panel">
+
+    <p>
+      Username:
+      <span id="username-display">
+        Guest
+      </span>
+    </p>
+
+    <input
+      type="text"
+      id="email"
+      placeholder="Optional Email">
+
+    <input
+      type="text"
+      id="phone"
+      placeholder="Optional Phone">
+
+    <button onclick="saveAccount()">
+      Save Account
+    </button>
+
+  </div>
+
+</section>
+
+<!-- Bot Section -->
+<section id="bot" class="section">
+
+  <h1>Bot Control</h1>
+
+  <div class="panel">
+
+    <div class="btn-group">
+      <button onclick="startBot()">Start</button>
+      <button onclick="stopBot()">Stop</button>
+      <button onclick="restartBot()">Restart</button>
+    </div>
+
+    <pre id="bot-log"></pre>
+
+  </div>
+
+</section>
+
+<!-- Chat -->
+<section id="chat" class="section">
+
+  <h1>Global Chat</h1>
+
+  <div class="panel">
+
+    <div id="chat-window"></div>
+
+    <input
+      type="text"
+      id="chat-input"
+      placeholder="Say something...">
+
+    <button onclick="sendMessage()">
+      Send
+    </button>
+
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Bottle Pixel SMP</p>
+  <p id="liveClock"></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

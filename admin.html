@@ -1,0 +1,124 @@
+<!-- admin.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bottle Pixel Admin</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg-animation">
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<header>
+  <div class="logo">⚡ Admin Panel</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#editor">Editor</a>
+    <a href="#files">Files</a>
+  </nav>
+</header>
+
+<section class="section hero">
+
+  <h1 class="glow-text">
+    Owner Control Panel
+  </h1>
+
+  <p class="subtext">
+    Full access for SharpPlayz52
+  </p>
+
+</section>
+
+<section class="section" id="editor">
+
+  <h1>Edit Website Content</h1>
+
+  <div class="panel">
+
+    <input
+      type="text"
+      id="siteTitle"
+      placeholder="Website Title">
+
+    <input
+      type="text"
+      id="siteSubtitle"
+      placeholder="Subtitle">
+
+    <textarea
+      id="bigEditor"
+      style="width:100%;height:220px;padding:14px;border:none;border-radius:14px;background:#111;color:#fff;"
+      placeholder="Write announcements / updates..."></textarea>
+
+    <button onclick="saveAdminData()">
+      Save Changes
+    </button>
+
+  </div>
+
+</section>
+
+<section class="section" id="files">
+
+  <h1>Bot Files Access</h1>
+
+  <div class="panel">
+
+    <div class="btn-group">
+      <button onclick="alert('bot.js opened')">bot.js</button>
+      <button onclick="alert('package.json opened')">package.json</button>
+      <button onclick="alert('server.js opened')">server.js</button>
+      <button onclick="alert('logs opened')">logs</button>
+    </div>
+
+    <pre id="bot-log">
+Admin Ready...
+You can connect backend later.
+    </pre>
+
+  </div>
+
+</section>
+
+<footer>
+© 2026 Bottle Pixel Admin
+</footer>
+
+<script>
+const owner = localStorage.getItem("bp_username") || "";
+
+if(owner !== "SharpPlayz52"){
+  alert("Access Denied");
+  window.location.href = "index.html";
+}
+
+function saveAdminData(){
+  localStorage.setItem(
+    "bp_title",
+    document.getElementById("siteTitle").value
+  );
+
+  localStorage.setItem(
+    "bp_subtitle",
+    document.getElementById("siteSubtitle").value
+  );
+
+  localStorage.setItem(
+    "bp_announce",
+    document.getElementById("bigEditor").value
+  );
+
+  alert("Saved Successfully");
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Owner | Bottle Pixel</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- UNIVERSAL SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo-text">BOTTLE PIXEL</div>
+        <nav id="universal-nav"></nav>
+    </aside>
+
+    <!-- CONTACT CONTENT -->
+    <main class="main-content">
+        <div class="contact-container fade-in">
+            <div class="header-box">
+                <span class="support-label">SUPPORT CENTER</span>
+                <h1>Contact Owner</h1>
+                <p>Have a bug report or a partnership proposal? Send a direct message to Aditya Ghatak.</p>
+            </div>
+
+            <form id="contactForm" class="contact-card">
+                <div class="input-row">
+                    <div class="field">
+                        <label>Category</label>
+                        <select id="category">
+                            <option value="bug">Bug Report</option>
+                            <option value="store">Store / Ranks Issue</option>
+                            <option value="partnership">Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Message</label>
+                    <textarea id="contactMessage" placeholder="Describe your issue in detail..." required></textarea>
+                </div>
+
+                <button type="submit" id="sendBtn" class="glow-button">
+                    <span class="btn-text">DISPATCH MESSAGE</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </form>
+
+            <div id="formStatus" class="status-msg"></div>
+        </div>
+    </main>
+</div>
+
+<script src="universal-sidebar.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>

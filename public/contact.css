@@ -1,0 +1,88 @@
+/* Container Spacing */
+.contact-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.header-box {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.support-label {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* Form Styling */
+.contact-card {
+    background: rgba(17, 19, 26, 0.8);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.field {
+    margin-bottom: 25px;
+}
+
+.field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+}
+
+select, textarea {
+    width: 100%;
+    background: #05060a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    padding: 15px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(83, 189, 235, 0.1);
+}
+
+/* Button with Glow Animation */
+.glow-button {
+    position: relative;
+    width: 100%;
+    padding: 18px;
+    background: var(--accent);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.glow-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(83, 189, 235, 0.4);
+}
+
+.status-msg {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}

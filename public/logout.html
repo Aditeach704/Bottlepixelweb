@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged Out | Bottle Pixel</title>
+    <link rel="stylesheet" href="logout.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="logout-container">
+        <div class="icon-box">
+            <div class="check-ring"></div>
+            <span class="door-icon">🚪</span>
+        </div>
+        
+        <h1>Successfully Logged Out</h1>
+        <p>Your session has been securely ended. Thank you for playing on <span>Bottle Pixel SMP</span>.</p>
+
+        <div class="action-area">
+            <a href="index.html" class="btn-return">Return to Home</a>
+            <p class="auto-redirect">Redirecting in <span id="timer">5</span>s...</p>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Auto redirect to home after 5 seconds
+        let timeLeft = 5;
+        const timerEl = document.getElementById('timer');
+        
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerEl.innerText = timeLeft;
+            if(timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = "index.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Account Settings | Bottle Pixel</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-container">
+    <!-- UNIVERSAL SIDEBAR INJECTS HERE -->
+    <aside class="sidebar">
+        <div class="logo-text">BOTTLE PIXEL</div>
+        <nav id="universal-nav"></nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="account-wrapper fade-in">
+            
+            <!-- Profile Overview -->
+            <header class="profile-header">
+                <div class="avatar-stack">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" id="userAvatar" alt="Profile">
+                    <div class="badge">PRO</div>
+                </div>
+                <div class="header-text">
+                    <h1>Account Settings</h1>
+                    <p>Manage your Bottle Pixel Lifesteal Identity</p>
+                </div>
+            </header>
+
+            <div class="settings-grid">
+                <!-- Main Form -->
+                <form id="accountForm" class="glass-card">
+                    <div class="input-section">
+                        <label>Username</label>
+                        <input type="text" id="username" placeholder="Change username...">
+                    </div>
+
+                    <div class="input-section">
+                        <label>Email Address</label>
+                        <input type="email" id="email" placeholder="Update email...">
+                    </div>
+
+                    <div class="input-section">
+                        <label>Security</label>
+                        <input type="password" id="password" placeholder="New Password (leave blank to keep)">
+                    </div>
+
+                    <button type="submit" id="saveBtn" class="glow-button">SAVE CHANGES</button>
+                    <div id="msg" class="status-msg"></div>
+                </form>
+
+<script src="universal-sidebar.js"></script>
+<script src="account.js"></script>
+</body>
+</html>

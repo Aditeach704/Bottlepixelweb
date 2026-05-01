@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin: Post News | Bottle Pixel</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+<div class="app-container">
+    <aside class="sidebar"><div class="logo-text">BOTTLE PIXEL</div><nav id="universal-nav"></nav></aside>
+    
+    <main class="main-content">
+        <div class="post-card fade-in">
+            <h2>✍️ Create Announcement</h2>
+            <div class="input-group">
+                <label>Title</label>
+                <input type="text" id="newsTitle" placeholder="Update Title...">
+            </div>
+            <div class="input-group">
+                <label>Content</label>
+                <textarea id="newsContent" placeholder="Write your news here..."></textarea>
+            </div>
+            <div class="check-group">
+                <input type="checkbox" id="isFeatured"> <label for="isFeatured">Mark as Featured</label>
+            </div>
+            <button class="post-btn" onclick="publishNews()">PUBLISH TO FEED</button>
+        </div>
+    </main>
+</div>
+<script src="universal-sidebar.js"></script>
+<script src="post.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.post-card { max-width: 600px; background: var(--side-bg); padding: 40px; border-radius: 25px; border: 1px solid var(--glass-border); }
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; margin-bottom: 8px; color: var(--text-dim); font-size: 14px; }
+input[type="text"], textarea { width: 100%; background: #000; border: 1px solid var(--glass-border); padding: 15px; color: white; border-radius: 10px; }
+textarea { height: 180px; }
+.post-btn { width: 100%; background: var(--accent); border: none; padding: 15px; color: white; font-weight: 800; border-radius: 10px; cursor: pointer; margin-top: 20px; }
+.check-group { display: flex; align-items: center; gap: 10px; font-size: 14px; }

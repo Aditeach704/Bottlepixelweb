@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottle Pixel | Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="bubble-bg"></div>
+    <div class="auth-card">
+        <h1 id="title">Welcome</h1>
+        <p id="subtitle">Authenticate to enter the Bottle Pixel's Website</p>
+        <form id="authForm">
+            <input type="text" id="user" placeholder="Username" required><br><br>
+            <input type="password" id="pass" placeholder="Password" required>
+            <button type="submit" id="btn">Login to SMP</button>
+        </form>
+        <div class="toggle-area">
+            <p id="toggleText">New here? <span onclick="toggleAuth()">Create Account</span></p>
+        </div>
+        <div id="status"></div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

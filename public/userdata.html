@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin: User Data | Bottle Pixel</title>
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="userdata.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app-container">
+    <aside class="sidebar">
+        <div class="logo-text">BOTTLE PIXEL</div>
+        <nav id="universal-nav"></nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="admin-header fade-in">
+            <span class="admin-badge">RESTRICTED ACCESS</span>
+            <h1>Player Database</h1>
+            <p>Managing all registered accounts for Bottle Pixel Lifesteal SMP.</p>
+        </div>
+
+        <div class="table-container fade-in">
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Status</th>
+                        <th>Rank</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userList">
+                    <!-- Data injected by JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+</div>
+<script src="universal-sidebar.js"></script>
+<script src="userdata.js"></script>
+</body>
+</html>

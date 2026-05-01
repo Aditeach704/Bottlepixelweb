@@ -1,0 +1,108 @@
+.account-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.avatar-stack {
+    position: relative;
+}
+
+.avatar-stack img {
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    border: 2px solid var(--accent);
+    background: var(--side-bg);
+}
+
+.badge {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background: var(--accent);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(83, 189, 235, 0.4);
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.glass-card {
+    background: rgba(17, 19, 26, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-section label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+input {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    border-radius: 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(83, 189, 235, 0.05);
+}
+
+.glow-button {
+    width: 100%;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 20px rgba(83, 189, 235, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Stats Sidebar Styling */
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-value {
+    font-weight: 800;
+}

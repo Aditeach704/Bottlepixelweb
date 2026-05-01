@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>God Level Ranks | Bottle Pixel</title>
+    <link rel="stylesheet" href="ranks.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="god-bg"></div>
+
+<div class="container">
+    <header class="main-nav">
+        <a href="chat.html" class="back-link">← Return to Lobby</a>
+        <h1>BOTTLE PIXEL <span>RANKS</span></h1>
+    </header>
+
+    <h2 class="group-title">Supreme Tiers</h2>
+    <div class="rank-grid">
+        <div class="rank-card r-leader god-tier">
+            <div class="card-inner">
+                <div class="glow"></div>
+                <h2>LEADER<span class="plus">++</span></h2>
+                <div class="price">GOD LEVEL</div>
+                <ul class="perks">
+                    <li>Custom Discord Role</li>
+                    <li>Infinite Heart Vault</li>
+                    <li>Unban 1 Friend (Monthly)</li>
+                </ul>
+                <button onclick="handleRank('Leader++')">ASCEND</button>
+            </div>
+        </div>
+
+        <div class="rank-card r-king god-tier">
+            <div class="card-inner">
+                <h2>KING<span class="plus">+</span></h2>
+                <div class="price">ELITE</div>
+                <ul class="perks">
+                    <li>Keep XP on Death</li>
+                    <li>/fly in Base</li>
+                </ul>
+                <button onclick="handleRank('King+')">CLAIM POWER</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="group-title">Supporter Tiers</h2>
+    <div class="rank-grid">
+        <div class="rank-card r-legendary">
+            <div class="card-inner">
+                <h2>LEGENDARY<span class="plus">+</span></h2>
+                <button onclick="handleRank('Legendary+')">CLAIM</button>
+            </div>
+        </div>
+        <div class="rank-card r-vip">
+            <div class="card-inner">
+                <h2>VIP<span class="plus">++</span></h2>
+                <button onclick="handleRank('VIP++')">CLAIM</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="group-title">Creator Tiers</h2>
+    <div class="rank-grid mini">
+        <div class="rank-card r-yt" onclick="handleRank('YouTube')"><div class="card-inner"><h2>YouTube</h2></div></div>
+        <div class="rank-card r-insta" onclick="handleRank('Insta')"><div class="card-inner"><h2>Insta</h2></div></div>
+        <div class="rank-card r-tiktok" onclick="handleRank('TikTok')"><div class="card-inner"><h2>TikTok</h2></div></div>
+        <div class="rank-card r-x" onclick="handleRank('X')"><div class="card-inner"><h2>X</h2></div></div>
+    </div>
+</div>
+
+<div id="god-toast" class="toast"></div>
+
+<script src="ranks.js"></script>
+</body>
+</html>

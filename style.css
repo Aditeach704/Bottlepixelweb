@@ -1,0 +1,256 @@
+/* =========================
+   Bottle Pixel style.css
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#050505,#0d1117,#111827);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Animated Background */
+.bg-animation{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.bg-animation span{
+  position:absolute;
+  width:20px;
+  height:20px;
+  background:rgba(74,222,128,.15);
+  border-radius:50%;
+  animation:floatUp 14s linear infinite;
+}
+
+.bg-animation span:nth-child(1){left:10%;bottom:-40px;animation-delay:0s;}
+.bg-animation span:nth-child(2){left:30%;bottom:-60px;animation-delay:2s;}
+.bg-animation span:nth-child(3){left:55%;bottom:-50px;animation-delay:4s;}
+.bg-animation span:nth-child(4){left:75%;bottom:-70px;animation-delay:6s;}
+.bg-animation span:nth-child(5){left:90%;bottom:-40px;animation-delay:8s;}
+
+@keyframes floatUp{
+  0%{transform:translateY(0) scale(1);opacity:0;}
+  20%{opacity:1;}
+  100%{transform:translateY(-110vh) scale(2);opacity:0;}
+}
+
+/* Navbar */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 28px;
+  background:rgba(10,10,10,.72);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+  font-size:28px;
+  font-weight:800;
+  color:#4ade80;
+  text-shadow:0 0 14px #4ade80;
+}
+
+nav{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:10px;
+  transition:.3s;
+}
+
+nav a:hover{
+  background:#4ade80;
+  color:#000;
+  transform:translateY(-2px);
+}
+
+/* Sections */
+.section{
+  padding:70px 20px;
+  max-width:1200px;
+  margin:auto;
+  animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* Hero */
+.hero{
+  text-align:center;
+  min-height:92vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.glow-text{
+  font-size:56px;
+  font-weight:900;
+  text-shadow:0 0 22px #4ade80;
+  margin-bottom:18px;
+}
+
+.subtext{
+  color:#c7c7c7;
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+/* Inputs */
+input{
+  width:100%;
+  padding:14px;
+  border:none;
+  outline:none;
+  border-radius:14px;
+  background:#1a1a1a;
+  color:#fff;
+  margin:8px 0;
+  transition:.3s;
+}
+
+input:focus{
+  box-shadow:0 0 12px #4ade80;
+}
+
+/* Buttons */
+button{
+  padding:14px 18px;
+  border:none;
+  border-radius:14px;
+  cursor:pointer;
+  font-weight:700;
+  background:#4ade80;
+  color:#000;
+  transition:.3s;
+  margin:6px;
+}
+
+button:hover{
+  transform:translateY(-2px) scale(1.03);
+  box-shadow:0 0 14px #4ade80;
+}
+
+/* Login */
+.login-box{
+  width:100%;
+  max-width:430px;
+  margin-top:10px;
+}
+
+/* Cards */
+.stats-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  width:100%;
+  margin-top:40px;
+}
+
+.card,.panel{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  padding:22px;
+  border-radius:22px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.card h2{
+  color:#4ade80;
+  margin-bottom:8px;
+}
+
+/* Panel */
+.panel{
+  max-width:800px;
+  margin:auto;
+}
+
+.btn-group{
+  margin-bottom:18px;
+}
+
+/* Bot Logs */
+#bot-log{
+  height:260px;
+  overflow:auto;
+  background:#0b0b0b;
+  padding:14px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.08);
+  white-space:pre-wrap;
+}
+
+/* Chat */
+#chat-window{
+  height:260px;
+  overflow:auto;
+  background:#0b0b0b;
+  padding:14px;
+  border-radius:14px;
+  margin-bottom:12px;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.chatLine{
+  padding:8px;
+  margin-bottom:8px;
+  background:#141414;
+  border-radius:10px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:30px 20px;
+  color:#aaa;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+  .glow-text{
+    font-size:36px;
+  }
+
+  header{
+    flex-direction:column;
+    gap:14px;
+  }
+
+  nav{
+    justify-content:center;
+  }
+
+  .section{
+    padding:50px 15px;
+  }
+}
